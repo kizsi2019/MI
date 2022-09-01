@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+}
+
+.wrapper {
+    background-color: rgb(30, 78, 214);
+}
+
+.bg-primary {
+    padding: 0;
+    background-color: rgb(30, 78, 214);
+}
+
+wrapper {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+menu {
+    width: 25%;
+    float: left;
+}
+
+menu ul {
+    margin: 0;
+    padding: 30px;
+    list-style: none;
+}
+
+menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 15px 0;
+}
+
+menu a:hover {
+    color: white;
+    padding: 15px;
+}
+
+menu ul li {
+    border-bottom: 1px dashed rgba(255, 255, 255, 2)
+}
+
+content::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.menu2 a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu2 a:hover {
+    color: black;
+    background-color: white;
+    text-decoration: none;
+}
+
+h1 {
+    background-color: rgb(9, 20, 119);
+    padding: 0.5em 0.5em 0.5em;
+    text-align: center;
+    color: white;
+}
+
+main {
+    width: 75%;
+    float: left;
+}
+
+.video {
+    display: inline-block;
+    text-align: center;
+    margin: 10px 0;
+    display: inline;
+    float: center;
+}
+
+.menu2 {
+    margin: 10px 10px;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 50px;
+}
