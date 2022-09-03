@@ -83,11 +83,23 @@ main {
 }
 
 .video {
-    display: inline-block;
-    text-align: center;
-    margin: 10px 0;
-    display: inline;
-    float: center;
+    border: 1px solid #CCCCCC;
+    height: 0;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+}
+
+.video iframe,
+.video object,
+.video embed {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 .menu2 {
