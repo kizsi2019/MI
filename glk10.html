@@ -73,15 +73,29 @@
                 </ul>
             </menu>
             <main>
-                <h1>Alakzat felismerés</h1>
+                <h1>Téglalap rajzolás arc köré</h1>
                 <div class="menu2">
-                    <button type="button" class="btn btn-outline-light btn-lg">Videó</button>
-                    <button type="button" class="btn btn-outline-light btn-lg"><a href="glk9.html">Kód</a></button>
+                    <button type="button" class="btn btn-outline-light btn-lg"><a href="gl10.html">Videó</a></button>
+                    <button type="button" class="btn btn-outline-light btn-lg">Kód</button>
                 </div>
-                <div class="video">
-                    <center>
-                        <iframe width="860" height="540" src="https://www.youtube.com/embed/S5lc4DdmGwo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </center>
+                <div class="kod">
+                    <pre>
+        import cv2
+
+        faceCascade = cv2.CascadeClassifier("Resources/haarcascade_frontalface_default.xml")
+        img = cv2.imread("Resources/lena.png")
+        imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+        faces = faceCascade.detectMultiScale(imgGray, 1.1, 4)
+
+        for (x,y,w,h) in faces:
+            cv2.rectangle(img, (x,y), (x+w, y+h), (255,0,0), 2)
+
+        cv2.imshow("Result", img)
+
+        cv2.waitKey(0)  
+               
+                    </pre>
                 </div>
             </main>
         </div>

@@ -73,15 +73,35 @@
                 </ul>
             </menu>
             <main>
-                <h1>Alakzat felismerés</h1>
+                <h1>OpenCV alapfüggvények</h1>
                 <div class="menu2">
-                    <button type="button" class="btn btn-outline-light btn-lg">Videó</button>
-                    <button type="button" class="btn btn-outline-light btn-lg"><a href="glk9.html">Kód</a></button>
+                    <button type="button" class="btn btn-outline-light btn-lg"><a href="gl3.html">Videó</a></button>
+                    <button type="button" class="btn btn-outline-light btn-lg">Kód</button>
                 </div>
-                <div class="video">
-                    <center>
-                        <iframe width="860" height="540" src="https://www.youtube.com/embed/S5lc4DdmGwo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </center>
+                <div class="kod">
+                    <pre>
+        import cv2
+        import numpy as np
+
+        img = cv2.imread("Resources/lena.png")
+        kernel = np.ones((5,5), np.uint8)
+
+        imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        imgBlur = cv2.GaussianBlur(imgGray, (7,7), 0)
+        imgCanny = cv2.Canny(img, 150, 200)
+        imgDialation = cv2.dilate(imgCanny, kernel, iterations=1)
+        imgEroded = cv2.erode(imgDialation, kernel, iterations=1)
+
+        cv2.imshow("Lena", img)
+        cv2.imshow("Gray Image", imgGray)
+        cv2.imshow("Blur Image", imgBlur)
+        cv2.imshow("Canny Image", imgCanny)
+        cv2.imshow("Dialation Image", imgDialation)
+        cv2.imshow("Eroded Image", imgEroded)
+
+
+        cv2.waitKey(0) 
+                    </pre>
                 </div>
             </main>
         </div>

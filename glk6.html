@@ -73,15 +73,30 @@
                 </ul>
             </menu>
             <main>
-                <h1>Alakzat felismerés</h1>
+                <h1>Perspektíva kezelés</h1>
                 <div class="menu2">
-                    <button type="button" class="btn btn-outline-light btn-lg">Videó</button>
-                    <button type="button" class="btn btn-outline-light btn-lg"><a href="glk9.html">Kód</a></button>
+                    <button type="button" class="btn btn-outline-light btn-lg"><a href="gl6.html">Videó</a></button>
+                    <button type="button" class="btn btn-outline-light btn-lg">Kód</button>
                 </div>
-                <div class="video">
-                    <center>
-                        <iframe width="860" height="540" src="https://www.youtube.com/embed/S5lc4DdmGwo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </center>
+                <div class="kod">
+                    <pre>
+        import cv2
+        import numpy as np
+
+        img = cv2.imread("Resources/cards.jpg")
+
+        width, height = 250, 350
+        pts1 = np.float32([[111,219],[287,188],[154,482],[352,440]])
+        pts2 = np.float32([[0,0],[width,0],[0, height],[width,height]])
+        matrix = cv2.getPerspectiveTransform(pts1, pts2)
+        imgOutput = cv2.warpPerspective(img, matrix, (width, height))
+
+        cv2.imshow("Output", img)
+        cv2.imshow("Output Perspective", imgOutput)
+
+        cv2.waitKey(0)   
+        
+                    </pre>
                 </div>
             </main>
         </div>

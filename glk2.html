@@ -73,15 +73,45 @@
                 </ul>
             </menu>
             <main>
-                <h1>Alakzat felismerés</h1>
+                <h1>Kép, videó kamerakép beolvasása</h1>
                 <div class="menu2">
-                    <button type="button" class="btn btn-outline-light btn-lg">Videó</button>
-                    <button type="button" class="btn btn-outline-light btn-lg"><a href="glk9.html">Kód</a></button>
+                    <button type="button" class="btn btn-outline-light btn-lg"><a href="gl2.html">Videó</a></button>
+                    <button type="button" class="btn btn-outline-light btn-lg">Kód</button>
                 </div>
-                <div class="video">
-                    <center>
-                        <iframe width="860" height="540" src="https://www.youtube.com/embed/S5lc4DdmGwo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </center>
+                <div class="kod">
+                    <pre>
+        ######################## READ IMAGE ############################
+        import cv2
+        # # LOAD AN IMAGE USING 'IMREAD'
+        # img = cv2.imread("Resources/lena.png")
+        # # DISPLAY
+        # cv2.imshow("Lena",img)
+        # cv2.waitKey(0)
+
+        ######################### READ VIDEO #############################
+        import cv2
+
+        cap = cv2.VideoCapture("Resources/test_video.mp4")
+        while True:
+            success, img = cap.read()
+            cv2.imshow("Video", img)
+            if cv2.waitKey(10) & 0xFF == ord('q'):
+            break
+        ######################### READ WEBCAM  ############################
+        #import cv2
+        #frameWidth = 640
+        #frameHeight = 480
+        #cap = cv2.VideoCapture(0)
+        #cap.set(3, frameWidth)
+        #cap.set(4, frameHeight)
+        #cap.set(10,150)
+        #while True:
+            #success, img = cap.read()
+            #cv2.imshow("Result", img)
+            #if cv2.waitKey(1) & 0xFF == ord('q'):
+                #break
+
+                    </pre>
                 </div>
             </main>
         </div>
