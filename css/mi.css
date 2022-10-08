@@ -108,3 +108,7 @@ main {
     justify-content: space-around;
     padding: 0 50px;
 }
+
+.logo {
+    max-width: 50%
+}
