@@ -123,8 +123,10 @@ h1 {
         color: white;
         font-size: 10%;
     }
-}
-
-.logo {
-    max-width: 50%
+    menu {
+        font-size: 40%;
+    }
+    .logokep {
+        width: 10px;
+    }
 }
