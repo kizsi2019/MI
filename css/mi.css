@@ -1,14 +1,16 @@
 * {
     padding: 0;
-    box-sizing: border-box
+    box-sizing: border-box;
+    background-color: rgb(30, 78, 214);
 }
 
 body {
     margin: 0;
+    background-color: rgb(30, 78, 214);
 }
 
 .wrapper {
-    background-color: rgb(30, 78, 214);
+    margin: 0 auto;
 }
 
 .bg-primary {
@@ -19,11 +21,6 @@ body {
 .kod {
     color: white;
     background-color: black;
-}
-
-wrapper {
-    max-width: 80%;
-    margin: 0 auto;
 }
 
 menu {
@@ -107,6 +104,25 @@ main {
     display: flex;
     justify-content: space-around;
     padding: 0 50px;
+}
+
+h1 {
+    font-size: 33px;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media screen and (max-width: 590px) {
+    .menu2 {
+        flex-direction: column;
+    }
+    h1 {
+        background-color: rgb(9, 20, 119);
+        padding: 0.5em 0.5em 0.5em;
+        text-align: center;
+        color: white;
+        font-size: 10%;
+    }
 }
 
 .logo {
